@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From Zero to Seven</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="navbar">
+    <a href="index.html">Home</a> <!-- Updated to link to the homepage -->
+    <a href="#synopsis">Synopsis</a>
+    <a href="#director">Director's Notes</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+</div>
+
+
+<div class="banner"></div>
+
+
+<!--new intro--> 
+<div class="intro-section">
+    <h2 class="intro-section-header">Introduction</h2> <!-- Heading above the image -->
+    <div class="intro-content"> <!-- Container for image and text -->
+        <img src="https://i.imgur.com/AeLR1wg.png" alt="Intro Image" class="intro-img"> <!-- Small image on the left -->
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> <!-- Text on the right -->
+    </div>
+</div>
+
+
+
+<!-- New About the Documentary Section -->
+<!-- About the Documentary Section -->
+<div class="about-section">
+    <h2 class="about-section-header">About the Documentary</h2> <!-- Heading above the image -->
+    <div class="about-content"> <!-- Container for image and text -->
+        <img src="https://i.imgur.com/AeLR1wg.png" alt="About Image" class="about-img"> <!-- Small image on the left -->
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> <!-- Text on the right -->
+    </div>
+</div>
+
+
+
+<!-- New Trailer Section -->
+<div class="trailer-section">
+    <h2>Documentary Trailer</h2> <!-- Added header for clarity -->
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="watch-now-btn">Watch Now</a>
+</div>
+
+<div class="poll-container">
+    <h2>Poll</h2> <!-- This is the newly added distinct header for the poll section -->
+    <h3>What's Your Favorite Part of the Documentary?</h3> <!-- Adjusted to serve as the question -->
+    <form id="pollForm">
+        <input type="radio" id="story" name="poll" value="The Story">
+        <label for="story">The Story</label><br>
+        <input type="radio" id="cinematography" name="poll" value="The Cinematography">
+        <label for="cinematography">The Cinematography</label><br>
+        <input type="radio" id="soundtrack" name="poll" value="The Soundtrack">
+        <label for="soundtrack">The Soundtrack</label><br>
+        <button type="button" onclick="submitPoll()">Vote</button>
+    </form>
+    <p id="thankYouMessage" style="display:none;">Thank you for voting!</p>
+</div>
+
+
+
+<!-- New Contact Section -->
+<div class="contact-section">
+    <form action="submitForm()" method="POST">
+        <input type="text" id="name" name="name" placeholder="Your Name">
+        <input type="email" id="email" name="email" placeholder="Your Email">
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+
+
+
+
+
+
+
+<div class="content">
+    <h1>Welcome to the Official Site of 'From Zero to Seven'</h1>
+    <p>This is the starting point of your content. Here you can add details about the film, the vision behind it, and anything else you'd like to share with your audience.</p>
+    <!-- Add more content here as needed -->
+</div>
+
+<div class="footer">
+    <p>© 2024 From Zero to Seven Film. All rights reserved.</p>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 150vh; /* Adjust this height as needed */
+    background: url('https://i.imgur.com/AeLR1wg.png') no-repeat center;
+    background-size: cover;
+}
+
+
+
+.content {
+    padding: 20px;
+    margin-top: 60px; /* Adjust based on navbar height to ensure content is not hidden behind it */
+}
+
+.footer {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+/* Existing styles... */
+
+.intro-section {
+    text-align: center;
+    margin-top: 30px; /* Adjust as needed to space from previous content */
+}
+
+.intro-section-header {
+    font-size: 36px; /* Large font size for the header */
+    color: #FFD700; /* Gold color for the header text */
+    padding-bottom: 10px; /* Space below the header */
+}
+
+.intro-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro-img {
+    max-width: 700px; /* Adjust size as needed */
+    margin-right: 20px; /* Space between image and text */
+}
+
+/* Ensure the text wraps around the image and fills the remaining horizontal space */
+.intro-content p {
+    color: white; /* Adjust text color as needed */
+    flex: 1; /* Allows the text to fill the space */
+    text-align: left; /* Align the text to the left */
+}
+
+
+/* About the Documentary Section Styles */
+.about-section {
+    text-align: center;
+    margin-top: 30px; /* Adjust as needed to space from previous content */
+}
+
+.about-section-header {
+    font-size: 36px; /* Large font size for the header */
+    color: #FFD700; /* Gold color for the header text */
+    padding-bottom: 10px; /* Space below the header */
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-img {
+    max-width: 750px; /* Adjust size as needed */
+    margin-right: 20px; /* Space between image and text */
+}
+
+/* Ensure the text wraps around the image and fills the remaining horizontal space */
+.about-content p {
+    color: white; /* Adjust text color as needed */
+    flex: 1; /* Allows the text to fill the space */
+    text-align: left; /* Align the text to the left */
+}
+
+
+/* Trailer Section Styles */
+.trailer-section {
+    text-align: center;
+    padding: 40px;
+    background-color: #1a1a1a; /* Matching body bg */
+}
+
+.watch-now-btn {
+    display: inline-block;
+    background-color: #555;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.watch-now-btn:hover {
+    background-color: #777;
+}
+
+/* Poll Section Styles */
+.poll-section {
+    padding: 20px;
+    text-align: center;
+    background-color: #2a2a2a; /* Slightly lighter than body bg for contrast */
+}
+
+/* Contact Section Styles */
+.contact-section {
+    padding: 20px;
+    background-color: #333; /* Matching navbar and footer bg */
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-section input[type="text"],
+.contact-section input[type="email"] {
+    margin: 10px 0;
+    padding: 10px;
+    width: 50%;
+}
+
+.contact-section button {
+    background-color: #555;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-section button:hover {
+    background-color: #777;
+}
+
+
+.poll-container {
+    background-color: #333; /* Dark background for contrast */
+    color: white; /* White text for readability */
+    padding: 20px;
+    margin: 20px auto; /* Center the poll container */
+    width: 50%; /* Adjust width as necessary */
+    text-align: center; /* Center text and form elements */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+.poll-container h2, .poll-container h3 {
+    margin: 0 0 20px 0; /* Add some space below headers */
+    color: #FFD700; /* Gold color for a bit of flair */
+}
+
+.poll-container form {
+    margin: 20px 0; /* Space out form from question */
+}
+
+.poll-container input[type="radio"] {
+    margin-right: 5px; /* Space out radio button from its label */
+}
+
+.poll-container label {
+    display: block; /* Make each option label block level to stack vertically */
+    margin: 10px 0; /* Add space between each option */
+    font-size: 16px; /* Increase font size for better readability */
+    cursor: pointer; /* Cursor hint for clickable options */
+}
+
+.poll-container button {
+    background-color: #FFD700; /* Gold background for the button */
+    color: #333; /* Dark text for contrast */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px; /* Rounded corners for the button */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.poll-container button:hover {
+    background-color: #E6C200; /* Slightly darker gold on hover */
+}
+
+
+
+
+
+
+
+function submitPoll() {
+    var radios = document.getElementsByName('poll');
+    var selectedValue;
+    for (var i = 0; i < radios.length; i++) {
+        if (radios[i].checked) {
+            selectedValue = radios[i].value;
+            break;
+        }
+    }
+    if(selectedValue) {
+        document.getElementById('thankYouMessage').style.display = 'block';
+        // Here, you can also send 'selectedValue' to your server for storage or analysis
+        console.log("Selected option: " + selectedValue); // Example: logging to the console
+    } else {
+        alert("Please select an option before voting.");
+    }
+}
